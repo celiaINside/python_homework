@@ -7,7 +7,30 @@ print (result)
 
 # Task 2: Greet with a Formatted String
 def greet(name):
-    print(f"Hello, {name}!")
+    return(f"Hello, {name}!")
     
 greet("Lucia")
 
+# Task 3: Calculator
+def calc(val1, val2, operation="multiply"):
+    try:
+        if operation == "multiply":
+            return val1 * val2
+        elif operation == "add":
+            return val1 + val2
+        elif operation == "subtract":
+            return val1 - val2
+        elif operation == "modulo":
+            return val1 % val2
+        elif operation == "int_divide":
+            return val1 // val2
+        elif operation == "power":
+            return val1 ** val2
+        elif operation == "divide":
+                return val1 / val2
+    except ZeroDivisionError:
+        return("You can't divide by 0!")
+    except TypeError as e:
+        return("You can't {operation} those values!")
+
+    calc(val1, val2, operation)
