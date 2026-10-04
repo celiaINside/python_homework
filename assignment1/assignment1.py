@@ -1,6 +1,13 @@
 # Task 1: Hello
-def greet():
+def hello():
     return "Hello!"
 
-result = greet()
+result = hello()
 print (result)
+
+# Task 2: Greet with a Formatted String
+def greet(name):
+    print(f"Hello, {name}!")
+    
+greet("Lucia")
+
