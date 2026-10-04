@@ -31,6 +31,6 @@ def calc(val1, val2, operation="multiply"):
     except ZeroDivisionError:
         return("You can't divide by 0!")
     except TypeError as e:
-        return("You can't {operation} those values!")
+        return(f"You can't {operation} those values!")
 
     calc(val1, val2, operation)
