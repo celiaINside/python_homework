@@ -34,3 +34,15 @@ def calc(val1, val2, operation="multiply"):
         return(f"You can't {operation} those values!")
 
     calc(val1, val2, operation)
+
+# Task 4: Data Type Conversion
+def data_type_conversion(value, data_type): 
+    try: 
+        if data_type == "float":
+            return float(value)
+        elif data_type == "str":
+            return str(value)
+        elif data_type == "int":
+            return int(value)
+    except TypeError as e:
+            return(f"You can't convert {value} into a {type}.")
