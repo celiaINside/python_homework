@@ -44,5 +44,5 @@ def data_type_conversion(value, data_type):
             return str(value)
         elif data_type == "int":
             return int(value)
-    except TypeError as e:
-            return(f"You can't convert {value} into a {type}.")
+    except ValueError as e:
+        return (f"You can't convert {value} into a {data_type}.")
