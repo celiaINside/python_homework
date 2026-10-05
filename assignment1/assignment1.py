@@ -46,3 +46,20 @@ def data_type_conversion(value, data_type):
             return int(value)
     except ValueError as e:
         return (f"You can't convert {value} into a {data_type}.")
+
+# Task 5: Grading System, Using *args
+def grade_function(*args):
+    try:
+        avg = sum(args) / len(args) 
+        if avg < 60:
+            return (f"The average grade is: F.")
+        elif 60 <= avg <= 69:
+            return (f"The average grade is: D.")
+        elif 70 <= avg <= 79:
+                return (f"The average grade is: C.")
+        elif 80 <= avg <= 89:
+                return (f"The average grade is: B.")
+        elif avg >= 90:
+                return (f"The average grade is: A.")
+    except (TypeError, ZeroDivisionError):
+        return ("Invalid data was provided.")
