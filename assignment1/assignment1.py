@@ -77,6 +77,10 @@ def student_scores(type, **kwargs):
         best_score = 0
         best_student = ""
         for key, value in kwargs.items():
-            print(f"{key}: {value}")
+            if value > best_score:
+                best_score = value
+                best_student = key
+        return best_student
+            
     elif type == "mean":
         return sum(kwargs.values()) / len(kwargs)
