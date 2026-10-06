@@ -70,3 +70,13 @@ def repeat(string, count):
     for i in range (count):
         new_string += string
     return new_string
+
+# Task 7: Student Scores, Using **kwargs
+def student_scores(type, **kwargs): 
+    if type == "best":
+        best_score = 0
+        best_student = ""
+        for key, value in kwargs.items():
+            print(f"{key}: {value}")
+    elif type == "mean":
+        return sum(kwargs.values()) / len(kwargs)
