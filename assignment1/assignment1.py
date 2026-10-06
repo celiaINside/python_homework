@@ -48,18 +48,25 @@ def data_type_conversion(value, data_type):
         return (f"You can't convert {value} into a {data_type}.")
 
 # Task 5: Grading System, Using *args
-def grade_function(*args):
+def grade(*args):
     try:
         avg = sum(args) / len(args) 
         if avg < 60:
-            return (f"The average grade is: F.")
+            return (f"F")
         elif 60 <= avg <= 69:
-            return (f"The average grade is: D.")
+            return (f"D")
         elif 70 <= avg <= 79:
-                return (f"The average grade is: C.")
+                return (f"C")
         elif 80 <= avg <= 89:
-                return (f"The average grade is: B.")
+                return (f"B")
         elif avg >= 90:
-                return (f"The average grade is: A.")
+                return (f"A")
     except (TypeError, ZeroDivisionError):
         return ("Invalid data was provided.")
+
+# Task 6: Use a For Loop with a Range
+def repeat(string, count):
+    new_string = ""
+    for i in range (count):
+        new_string += string
+    return new_string
