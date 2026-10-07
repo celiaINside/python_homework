@@ -84,3 +84,18 @@ def student_scores(type, **kwargs):
             
     elif type == "mean":
         return sum(kwargs.values()) / len(kwargs)
+
+# Take 8: Titleize, with String and List Operations
+def titleize(string): 
+    words = (string).split()
+    lower_words = ["a", "on", "an", "the", "of", "and", "is", "in"]
+    for i, word in enumerate(words):
+        if i == 0:
+            words[i] = word.capitalize()
+        elif i == len(words) - 1:
+            words[i] = word.capitalize()
+        elif word in lower_words:
+            pass
+        else:
+            words[i] = word.capitalize()
+    return " ".join(words)
