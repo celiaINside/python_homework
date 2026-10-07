@@ -33,8 +33,6 @@ def calc(val1, val2, operation="multiply"):
     except TypeError as e:
         return(f"You can't {operation} those values!")
 
-    calc(val1, val2, operation)
-
 # Task 4: Data Type Conversion
 def data_type_conversion(value, data_type): 
     try: 
@@ -112,16 +110,19 @@ def hangman(secret, guess):
 
 # Task 10: Pig Latin, Another String Manipulation Exercise
 def pig_latin(string):
-    words = (string).split()
+    words = string.split()
     vowels = ["a", "e", "i", "o", "u"]
     result = []
     for word in words:
         if word[0] in vowels:
-            new_word = word + "ay" 
+            new_word = word + "ay"
         else:
             i = 0
             while word[i] not in vowels:
-                i += 1
+                if word[i] == "q" and word[i + 1] == "u":
+                    i += 2
+                else:
+                    i +=1
             new_word = word[i:] + word[:i] + "ay"
         result.append(new_word)
     return " ".join(result)
