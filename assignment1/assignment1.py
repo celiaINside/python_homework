@@ -100,7 +100,7 @@ def titleize(string):
             words[i] = word.capitalize()
     return " ".join(words)
 
-# Take 9: Hangman with More String Operations
+# Task 9: Hangman with More String Operations
 def hangman(secret, guess):
     result = ""
     for letter in secret:
@@ -109,3 +109,19 @@ def hangman(secret, guess):
         else:
             result = result + "_"
     return result
+
+# Task 10: Pig Latin, Another String Manipulation Exercise
+def pig_latin(string):
+    words = (string).split()
+    vowels = ["a", "e", "i", "o", "u"]
+    result = []
+    for word in words:
+        if word[0] in vowels:
+            new_word = word + "ay" 
+        else:
+            i = 0
+            while word[i] not in vowels:
+                i += 1
+            new_word = word[i:] + word[:i] + "ay"
+        result.append(new_word)
+    return " ".join(result)
