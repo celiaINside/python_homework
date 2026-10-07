@@ -99,3 +99,13 @@ def titleize(string):
         else:
             words[i] = word.capitalize()
     return " ".join(words)
+
+# Take 9: Hangman with More String Operations
+def hangman(secret, guess):
+    result = ""
+    for letter in secret:
+        if letter in guess:
+            result = result + letter
+        else:
+            result = result + "_"
+    return result
