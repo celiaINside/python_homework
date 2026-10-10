@@ -6,7 +6,7 @@ try:
         
         while True:
             content = input(prompt)
-            content = file.write(content + "\n")
+            file.write(content + "\n")
             if content == "done for now":
                 break
             prompt = "What else? "
