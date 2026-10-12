@@ -45,6 +45,7 @@ print(employee_id_column)
 # Task 4: Find the Employee First Name
 def column_index(column_name):
     return employees["fields"].index(column_name)
+
 first_name_column = column_index("first_name")
 print(first_name_column)
 
@@ -52,3 +53,9 @@ def first_name(row_number):
     index = column_index("first_name")
     return employees["rows"][row_number][index]
 
+# Task 5: Find the Employee: a Function in a Function
+def employee_find(employee_id):
+    def employee_match(row):
+        return int(row[employee_id_column]) == employee_id
+    matches=list(filter(employee_match, employees["rows"]))
+    return matches 
