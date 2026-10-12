@@ -74,3 +74,14 @@ def sort_by_last_name():
 
 sort_by_last_name()
 print(employees)
+
+# Task 8: Create a dict for an Employee
+def employee_dict(row):
+    keys = employees["fields"]
+    employee_data = {}
+    for key, value in zip(keys, row):
+        if key == "employee_id":
+            pass
+        else:
+            employee_data[key] = value
+    return employee_data
