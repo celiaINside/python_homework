@@ -85,3 +85,16 @@ def employee_dict(row):
         else:
             employee_data[key] = value
     return employee_data
+
+# Task 9: Task 9: A dict of dicts, for All Employees
+def all_employees_dict():
+    all_employees = {}
+
+    for row in employees["rows"]:
+        employee_id = row[employee_id_column]
+        all_employees[employee_id] = employee_dict(row) 
+
+    return all_employees
+
+print(all_employees_dict())
+
