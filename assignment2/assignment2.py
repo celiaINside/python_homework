@@ -98,3 +98,7 @@ def all_employees_dict():
 
 print(all_employees_dict())
 
+# Task 10: Use the os Module
+import os
+def get_this_value():
+    return os.getenv("THISVALUE")
