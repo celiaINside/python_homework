@@ -102,3 +102,12 @@ print(all_employees_dict())
 import os
 def get_this_value():
     return os.getenv("THISVALUE")
+
+# Task 11: Creating Your Own Module
+import custom_module
+
+def set_that_secret(new_secret):
+    custom_module.set_secret(new_secret)
+
+set_that_secret("puppy")
+print(custom_module.secret)
