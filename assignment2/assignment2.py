@@ -111,3 +111,31 @@ def set_that_secret(new_secret):
 
 set_that_secret("puppy")
 print(custom_module.secret)
+
+# Task 12: Read minutes1.csv and minutes2.csv
+import csv 
+
+def read_minutes_file(filename):
+    minutes = {}
+    rows = []
+
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        for counter, row in enumerate(reader):
+            if counter == 0:
+                minutes["fields"] = row
+            else:
+                rows.append(tuple(row))
+
+    minutes["rows"] = rows
+    return minutes
+
+def read_minutes():
+    minutes1 = read_minutes_file("../csv/minutes1.csv")
+    minutes2 = read_minutes_file("../csv/minutes2.csv")
+
+    return minutes1, minutes2
+
+minutes1, minutes2 = read_minutes()
+print(minutes1)
+print(minutes2)
