@@ -148,3 +148,15 @@ def create_minutes_set():
     return combined_set
 
 minutes_set = create_minutes_set()
+
+# Task 14: Convert to datetime
+from datetime import datetime
+
+def create_minutes_list():
+    minutes_list = list(minutes_set)
+    minutes_list = list(map(lambda x: (x[0], datetime.strptime(x[1], "%B %d, %Y")), minutes_list))
+
+    return minutes_list
+
+minutes_list = create_minutes_list()
+print(minutes_list)
