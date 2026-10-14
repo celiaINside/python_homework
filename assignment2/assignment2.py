@@ -139,3 +139,12 @@ def read_minutes():
 minutes1, minutes2 = read_minutes()
 print(minutes1)
 print(minutes2)
+
+# Task 13: Create minutes_set
+def create_minutes_set(): 
+    minutes1_set = set(minutes1["rows"])
+    minutes2_set = set(minutes2["rows"])
+    combined_set = minutes1_set.union(minutes2_set)
+    return combined_set
+
+minutes_set = create_minutes_set()
