@@ -1,0 +1,15 @@
+function: say_hello
+positional parameters: none
+keyword parameters: none
+return: None
+
+function: accept_arguments
+positional parameters: (12, 'hello', True)
+keyword parameters: none
+return: True
+
+function: return_decorator
+positional parameters: none
+keyword parameters: {'name': 'Jess', 'count': 5}
+return: <function logger_decorator at 0x100b348b0>
+
