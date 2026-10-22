@@ -106,12 +106,3 @@ if __name__ == "__main__":
         game_over, message = board.whats_next()
     print(board)
     print(message)
-        
-        
-        #valid_moves = X
-
-# game = Board()
-
-# print(game.board_array)
-# print(game.turn)
-# print(Board.valid_moves)
