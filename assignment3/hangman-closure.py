@@ -5,7 +5,7 @@ def make_hangman(secret_word):
         guesses.append(letter)
         display_word = ""
     
-        for letter in secret_word:
+        for char in secret_word:
                 if letter in guesses:
                     display_word += letter
                 else: 
@@ -15,5 +15,11 @@ def make_hangman(secret_word):
 
     return hangman_closure
 
+secret_word = input("Enter the secret word: ")
+game = make_hangman(secret_word)
 
-
+while True:
+    guess = input("Guess a letter: ")
+    if game(guess):
+        print("You guessed the word!")
+        break
