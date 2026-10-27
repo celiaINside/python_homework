@@ -25,3 +25,13 @@ print(task1_older)
 
 # Save the DataFrame as a CSV file
 task1_older.to_csv("employees.csv", index=False)
+
+# Task 2: Loading Data from CSV and JSON
+task2_employees = pd.read_csv('employees.csv')
+print(task2_employees)
+
+json_employees = pd.read_json('additional_employees.json')
+print(json_employees)
+
+more_employees = pd.concat([task2_employees, json_employees], ignore_index=True)
+print(more_employees)
