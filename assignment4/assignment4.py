@@ -60,7 +60,7 @@ clean_data["Age"] = clean_data["Age"].replace("unknown", pd.NA)
 clean_data["Age"] = pd.to_numeric(clean_data["Age"], errors="coerce")
 print(clean_data) 
 
-clean_data["Salary"] = clean_data["Salary"].replace("unknown", pd.NA)
+clean_data["Salary"] = clean_data["Salary"].replace(["unknown", "n/a"], pd.NA)
 clean_data["Salary"] = pd.to_numeric(clean_data["Salary"], errors="coerce")
 print(clean_data)
 
@@ -69,3 +69,4 @@ clean_data["Age_filled_mean"] = clean_data["Age"].fillna(mean_age)
 
 median_salary = clean_data["Salary"].median()  
 clean_data["Salary_filled_median"] = clean_data["Salary"].fillna(median_salary)
+print(clean_data)
